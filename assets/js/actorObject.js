@@ -2,7 +2,7 @@ var actors = {
     arr: [
         'arnold schwarzenegger',
         'eddie murphy',
-        'billy murray',
+        'bill murray',
         'harrison ford',
         'tom selleck'
     ]
