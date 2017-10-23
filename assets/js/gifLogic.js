@@ -1,5 +1,6 @@
 $(".actor-container").on("click", ".actor-btn", function () {
 
+    //get button click data-name value
     var actor = $(this).data("name");
 
     var queryURL = "https://api.giphy.com/v1/gifs/search?q=" +
@@ -10,6 +11,8 @@ $(".actor-container").on("click", ".actor-btn", function () {
             method: "GET"
         })
         .done(function (response) {
+            //pass response to separate function to prevent
+            //overrunning from js
             displayGifs(response);
         });
 });
@@ -19,11 +22,16 @@ function displayGifs(response) {
     var actorContainer = $(".gif-container");
     var results = response.data;
 
+    //clear gif container 
+    actorContainer.empty();
+
+    //loop through array
     results.forEach(function(element) {
         
         let gifDiv = $("<div class='gifDiv'>");
         let gifImg = $("<img class='gifImg'>");
 
+        //assign gif attributes for still and animate state
         gifImg.attr({
             src: element.images.fixed_width_still.url,
             alt: element.title,
@@ -38,24 +46,16 @@ function displayGifs(response) {
 
 }
 
+//gif click event
 $(".gif-container").on("click", ".gifImg", function () {
 
     var dataState = $(this).attr("data-state")
 
+    //change to still and animate states
     if(dataState === "still"){
         $(this).attr('data-state', 'animate');
         $(this).attr('src', $(this).attr('data-animate'));
-
-        // $(this).attr({
-        //     'data-state': 'animate',
-        //     src: $(this).attr('data-animate')
-        // })
     } else {
-        // $(this).attr({
-        //     'data-state': 'still',
-        //     src: $(this).attr('data-still')
-        // });
-
         $(this).attr('data-state', 'still');
         $(this).attr('src', $(this).attr('data-still'));
     }

@@ -1,3 +1,4 @@
+//global actor json object
 var actors = {
     arr: [
         'arnold schwarzenegger',
