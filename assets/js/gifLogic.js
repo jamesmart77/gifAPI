@@ -30,7 +30,8 @@ function displayGifs(response) {
         
         let gifDiv = $("<div class='gifDiv'>");
         let gifImg = $("<img class='gifImg'>");
-
+        let rating
+        
         //assign gif attributes for still and animate state
         gifImg.attr({
             src: element.images.fixed_width_still.url,
