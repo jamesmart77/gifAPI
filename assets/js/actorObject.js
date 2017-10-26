@@ -1,10 +1,10 @@
 //global actor json object
 var actors = {
     arr: [
-        'arnold schwarzenegger',
-        'eddie murphy',
-        'bill murray',
-        'harrison ford',
-        'tom selleck'
+        'Arnold Schwarzenegger',
+        'Eddie Murphy',
+        'Bill Murray',
+        'Harrison Ford',
+        'Jack Nicholson'
     ]
 }

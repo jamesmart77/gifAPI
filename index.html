@@ -18,35 +18,47 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
         crossorigin="anonymous"></script>
 
+    <!--Font Awesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
     <link rel="stylesheet" href="assets/css/style.css">
 
-
     <title>GIF Tastic</title>
+    <link rel="shortcut icon" href="assets/images/favicon.ico" />
 </head>
 
 <body>
 
     <div class="wrapper">
-        <div class="row">
-            <div class="col-md-3">
-                <!-- add actor button -->
+
+        <!-- user input section -->
+        <div class="row actor-row">
+            <div class="col-md-12 actor-input">
                 <div class="input-group">
-                    <input id="user-input" type="text" class="form-control" placeholder="Actor Name...">
+                    <input id="user-input" type="text" class="form-control" placeholder="Actor Name...or really anthing :)">
+                    <!-- add actor button -->
                     <span class="input-group-btn">
-                        <button id="addActor-btn"class="btn btn-warning" type="button">Add</button>
+                        <button id="addActor-btn" class="btn btn-warning" type="button">Add</button>
                     </span>
                 </div>
             </div>
+        </div>
+        <div class="row actor-row">
             <!-- where actor buttons will append -->
-            <div class="actor-container col-md-8">
+            <div class="actor-container col-md-12">
 
             </div>
         </div>
         <!-- where gifs will append -->
-        <div class="row">
-            <div class="gif-container col-md-12">
+        <div class="row gif-row">
+            <!-- alert message, default is hidden -->
+            <div class="alert alert-success alert-dismissable">
+                <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                <strong>Success!</strong> Gif URL copied to clipboard.
+            </div>
+            <div class="gif-container col-md-10">
 
             </div>
 
@@ -59,7 +71,7 @@
     <script type="text/javascript" src="assets/js/addActor.js"></script>
     <script type="text/javascript" src="assets/js/showActors.js"></script>
     <script type="text/javascript" src="assets/js/pageLoad.js"></script>
-    
+
 </body>
 
 </html>
